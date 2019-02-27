@@ -1,0 +1,8 @@
+dist: xenial
+language: c
+addons:
+  apt:
+    packages:
+    - rake
+script:
+  - rake
