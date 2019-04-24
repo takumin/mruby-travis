@@ -1,5 +1,9 @@
 container:
   image: ruby:latest
 
-test_task:
-  test_script: rake
+build_task:
+  setup_script:
+  - git submodule update --init --recursive
+  - apt-get update
+  - apt-get install build-essential bison flex
+  build_script: rake
